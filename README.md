@@ -24,3 +24,19 @@ Sub-tasks:
 6. Write unit tests to validate the API endpoint and payload validations.
 7. Document the API endpoint and its usage, including the expected payload format and response structure.
 8. Test the API endpoint thoroughly, ensuring it meets the acceptance criteria.
+
+## API Documentation
+### Add Product
+
+`/api/products` POST
+
+example request body:
+```json
+{
+  "name": "Product Name",
+  "description": "Product Description",
+  "price": 100.50,
+  "category": "Product Category",
+  "image": "https://example.com/image.jpg"
+}
+```
