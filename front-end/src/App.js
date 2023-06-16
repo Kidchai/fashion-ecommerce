@@ -1,0 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Create from "./components/Create";
+import View from "./components/View";
+
+function App() {
+  return (
+    <div>
+      <Router>
+        <div className="container">
+          <Routes>
+            <Route path="/view" element={<View />}></Route>
+            <Route path="/add/:id" element={<Create />}></Route>
+          </Routes>
+        </div>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
