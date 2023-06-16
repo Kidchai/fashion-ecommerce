@@ -29,7 +29,7 @@ function Create() {
     const handleSubmit = (event) => {
         event.preventDefault();
         createProduct(product).then(() => {
-            navigate("/view");
+            navigate("/");
         })
             .catch((error) => {
                 console.log(error);
