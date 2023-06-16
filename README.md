@@ -40,3 +40,6 @@ example request body:
   "image": "https://example.com/image.jpg"
 }
 ```
+
+## How it looks like (React App)
+![GIF for adding new product](files-for-readme/create.gif)
