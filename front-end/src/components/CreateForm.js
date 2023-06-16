@@ -4,8 +4,13 @@ import { useNavigate } from "react-router-dom";
 function CreateForm({ product, handleChange, handleSubmit, formTitle, buttonLabel, placeholders }) {
     const navigate = useNavigate();
 
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        handleSubmit();
+    };
+
     const handleCancel = () => {
-        navigate("/view");
+        navigate("/");
     };
 
     return (
@@ -14,12 +19,12 @@ function CreateForm({ product, handleChange, handleSubmit, formTitle, buttonLabe
                 <div className="row">
                     <div className="card col-md-6 offset-md-3">
                         <div className="card-body">
-                            <h3 className="card-title" style={{ marginBottom: "20px"}}>
+                            <h3 className="card-title" style={{ marginBottom: "20px" }}>
                                 {formTitle}
                             </h3>
-                            <form>
+                            <form onSubmit={handleFormSubmit}>
                                 <div className="form-group">
-                                    <label style={{ marginLeft: "1px"}}>
+                                    <label style={{ marginLeft: "1px" }}>
                                         Name:</label>
                                     <input
                                         className="form-control"
